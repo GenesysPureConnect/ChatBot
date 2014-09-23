@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleLuckyBot", "GoogleLuckyBot\GoogleLuckyBot.csproj", "{81DAB7C3-7764-4E61-B6A9-8852C6E42954}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeBot", "TimeBot\TimeBot.csproj", "{EA38EB0D-2DAF-443C-BF23-425E062D6A28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeBot", "AttributeBot\AttributeBot.csproj", "{BDB4C385-E0DD-43F1-85C8-108BEA7E1693}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslatorBot", "TranslatorBot\TranslatorBot.csproj", "{9AF9D6EC-9458-4528-8CF2-7A802BCC5B21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81DAB7C3-7764-4E61-B6A9-8852C6E42954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DAB7C3-7764-4E61-B6A9-8852C6E42954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DAB7C3-7764-4E61-B6A9-8852C6E42954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DAB7C3-7764-4E61-B6A9-8852C6E42954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA38EB0D-2DAF-443C-BF23-425E062D6A28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA38EB0D-2DAF-443C-BF23-425E062D6A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA38EB0D-2DAF-443C-BF23-425E062D6A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA38EB0D-2DAF-443C-BF23-425E062D6A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDB4C385-E0DD-43F1-85C8-108BEA7E1693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB4C385-E0DD-43F1-85C8-108BEA7E1693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB4C385-E0DD-43F1-85C8-108BEA7E1693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB4C385-E0DD-43F1-85C8-108BEA7E1693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AF9D6EC-9458-4528-8CF2-7A802BCC5B21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF9D6EC-9458-4528-8CF2-7A802BCC5B21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AF9D6EC-9458-4528-8CF2-7A802BCC5B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AF9D6EC-9458-4528-8CF2-7A802BCC5B21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
