@@ -4,6 +4,28 @@ Chat Bot
 The Chat Bot is an IceLib example application to allow a 'bot', denoting a computer program or robot with a very specific function, to interact with a CIC web chat user. The basic premise of a chat bot is that the human user types a message into the chat, the bot reads that message, and then responds with an appropriate response.
 
 
+Chat Bot Serivce Functionality
+------------------------------
+
+The chat bot service does not directly provide any bot functionality, but instead dynamically loads bots and assigns a bot to each chat it monitors. A bot is seleceted when the chat is assigned to a workgroup queue and the bot is unassigned when the chat is assigned to a user, disconnected (abandon), or leaves the workgroup queue for any reason. The code could easily be modified to allow a bot to be assigned while a customer and agent are joined to the chat (like the translation use case below).
+
+
+### Queue Monitoring
+
+The chat bot service monitors for chats in queues defined via the config file. The _QueueList_ setting defines the pipe-seperated names of workgroup queues to be monitored. The service will monitor all of these queues for new chats and will assign a bot to each new chat that comes into any of the queues.
+
+
+### Bot Assignment
+
+Each bot provides its priority via `IChatBot.Priority` (ushort - 0 to 65,535), with a higher number being a higher priority. When a new chat arrives on a monitored queue, the chat bot service will invoke the `IChatBot.ClaimInteraction(...)` method for each bot, in order of highest priority to lowest, until a bot claims the interaction or all bots have refused the interaction. If no bots claim the interaction on the first pass, a second pass will be made to ask each bot to reconsider. This allows the first pass to find a bot that is best suited for the chat, based on the bot's internal criteria, but allow a less-suitable bot to be used if a first choice was not found.
+
+Once a bot is selected, meaning a bot returns true from `IChatBot.ClaimInteraction(...)`, the chat bot service will invoke `IChatBot.InteractionAssigned(...)` for the bot to let it know that it has successfully been assigned to the chat.
+
+When the chat is assigned to a CIC agent, the user abandons, or the chat is removed from the workgroup queue for any reason, the chat is unassigned from the bot and `IChatBot.InteractionUnassigned(...)` is invoked to inform the bot that it is no longer assigned to that interaction (so it can clean up if it was keeping track) and also provides the reason for unassignment.
+
+_Note that this assignment process does not involve actually assigning the chat to any CIC user or queue, but is only an internal process within the chat bot service._
+
+
 Example Bots
 ============
 
