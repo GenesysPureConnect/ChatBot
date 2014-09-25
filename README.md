@@ -32,28 +32,28 @@ Example Bots
 All bots are dynamically loaded by the Chat Bot Service using .NET reflection. The compiled DLL for each bot should be placed in the _bots_ directory with the service executable. For example, if the service is installed to C:\chatbot\, the bots should be placed in C:\chatbot\bots\ or any subfolder within that path. For a bot to be loaded, it must expose a public class that implements the `IChatBot` interface.
 
 
-Time Bot
---------
+[Time Bot]
+----------
 
 Thankfully, this bot is not the T-800 variety of time bot, but a simple program that will respond with the current time. The human user can say anything, and the bot will say: _The current time is {time}_.
 
 The purpose of this bot is to illustrate the most basic concept of of a bot, which is to respond with a simple message.
 
 
-Attribute Bot
--------------
+[Attribute Bot]
+---------------
 
 The Attribute Bot is a sample bot that illustrates the use of the `IAttributeService` interface. This bot allows the human user to get the value of an attribute (or attributes) by inputting the pipe seperated list of attributes to retrieve. It also allows the user to set the value of an attribute by inputting the name and desired value, such as _Eic\_RemoteName=Roland Orzabal_. This exact use case isn't realistic for an actual implementation, but illustrates that a bot can get and set attributes on an interaction as necessary.
 
 
-Google Lucky Bot
-----------------
+[Google Lucky Bot]
+------------------
 
 The Google Lucky Bot is an example of using an external source for obtaining information to use when responding to a message. The bot will take in the input from the user, search google for the query, and return the link for the "I'm feeling lucky" result.
 
 
-Translator Bot
---------------
+[Translator Bot]
+----------------
 
 The Translator Bot is an example of potentially useful functionality for the chat bot. The bot allows the human user to specify the language to which they want the bot to translate to, and then translates any input into that language. Currently, the only translation use cases that exist are for pigs that can use computers and computers themselves, so the only implemented languages are pig latin and binary. 
 
@@ -92,3 +92,7 @@ This service provides an interface to allow a bot to request that the chat be as
 
 
 [Google's Translate API]:https://cloud.google.com/translate/
+[Attribute Bot]:https://github.com/InteractiveIntelligence/ChatBot/blob/master/src/ExampleBots/AttributeBot/AttributeBot.cs
+[Google Lucky Bot]:https://github.com/InteractiveIntelligence/ChatBot/blob/master/src/ExampleBots/GoogleLuckyBot/GoogleBot.cs
+[Time Bot]:https://github.com/InteractiveIntelligence/ChatBot/blob/master/src/ExampleBots/TimeBot/TimeBot.cs
+[Translator Bot]:https://github.com/InteractiveIntelligence/ChatBot/blob/master/src/ExampleBots/TranslatorBot/TranslatorBot.cs
