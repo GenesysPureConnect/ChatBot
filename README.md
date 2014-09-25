@@ -39,17 +39,23 @@ Thankfully, this bot is not the T-800 variety of time bot, but a simple program 
 
 The purpose of this bot is to illustrate the most basic concept of of a bot, which is to respond with a simple message.
 
+![Time Bot screenshot](http://i.imgur.com/QBqWGQ9.png)
+
 
 [Attribute Bot]
 ---------------
 
 The Attribute Bot is a sample bot that illustrates the use of the `IAttributeService` interface. This bot allows the human user to get the value of an attribute (or attributes) by inputting the pipe seperated list of attributes to retrieve. It also allows the user to set the value of an attribute by inputting the name and desired value, such as _Eic\_RemoteName=Roland Orzabal_. This exact use case isn't realistic for an actual implementation, but illustrates that a bot can get and set attributes on an interaction as necessary.
 
+![Attribute Bot screenshot](http://i.imgur.com/bbl6JSX.png)
+
 
 [Google Lucky Bot]
 ------------------
 
 The Google Lucky Bot is an example of using an external source for obtaining information to use when responding to a message. The bot will take in the input from the user, search google for the query, and return the link for the "I'm feeling lucky" result.
+
+![Google Lucky Bot screenshot](http://i.imgur.com/9maVGKr.png)
 
 
 [Translator Bot]
@@ -58,6 +64,8 @@ The Google Lucky Bot is an example of using an external source for obtaining inf
 The Translator Bot is an example of potentially useful functionality for the chat bot. The bot allows the human user to specify the language to which they want the bot to translate to, and then translates any input into that language. Currently, the only translation use cases that exist are for pigs that can use computers and computers themselves, so the only implemented languages are pig latin and binary. 
 
 A potential use case for this bot would be to translate human languages during a chat interaction using [Google's Translate API]. If a Spanish speaking customer is chatting with an English speaking agent, the translator bot could translate the customer's Spanish text into English and the agent's English text into Spanish.
+
+![Translator Bot screenshot](http://i.imgur.com/T0dlQMc.png)
 
 
 Chat Bot Services
