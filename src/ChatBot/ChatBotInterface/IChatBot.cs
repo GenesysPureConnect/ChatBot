@@ -39,6 +39,7 @@ namespace ININ.Alliances.ChatBotInterface
         /// <para>TopicTracer - ININ tracing topic</para>
         /// <para>IAttributeService - Service for getting and setting attributes on interactions</para>
         /// <para>IChatMessageService - Service for sending messages to chats</para>
+        /// <para>IChatReassignmentService - Service for requesting that the chat be reassigned to another bot</para>
         /// </param>
         void OnLoad(IServiceProvider serviceProvider);
 
